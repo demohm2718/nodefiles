@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>My Nodejs Practice File!</title>
+    </head>
+    <body>
+        <h1>My first Nodejs HTML file! (not really)</h1>
+        <h2>Using Node with the CLI.</h2>
+        <p>Take a look at this ol paragraph! Node is servin' up my HTML.
+        I am typing this in <code>index.html</code> and node is serving this html from <code>http_server.js</code>.
+        </p>
+
+        <h2>NPM Scripts</h2>
+        <p>Here, we created <code>chalktest.js</code> and installed a package called "chalk" by using <code>npm install chalk</code>.
+        This package writes dynamic command line outputs.
+        We made it output some red and blue fonts with varying messages.
+        To execute it, we used <code>node chalktest.js</code>.
+        </p>
+
+        <h2>Installing and Using MongoDB</h2>
+        <p>Installing was tricky as I couldn't run the CLI for MongoDB.
+        I found out that the issue was me creating a folder in the wrong place.
+        I needed to create a folder <code>/data/db</code> (Note that this is the full path).
+        Instead, I created this folder within one of my home folders such that i made <code>~/Dev/data/db</code>, which threw an error that made it so mongo didnt stay running.
+        Upon further investigation, I noticed within the error it wrote that it couldn't find <code>/data/db</code>.
+        Thus, coming to the conclusion that I misplaced the folder.
+        When I ran <code>mongo</code> in a new terminal, it ran perfectly, showing the default db that comes with mongo called <code>test</code>.
+        </p>
+
+        <h2>Node.js Frameworks</h2>
+        <ul>Express.js</ul>
+        <ul>Koa.js</ul>
+        <ul>Meteor</ul>
+
+        <h3>Express excercise</h3>
+        <p> Installing Express was easy as <code>sudo npm install express</code>.
+        Similar with body-parser (a plugin for Express, not Node).
+        These are necessary to create APIs for the excercise.
+        I also installed a Firefox addon for a RESTClient.
+        It allows us to test out the API by using HTML verbs (POST, GET, etc.).
+        </p>
+    </body>
+</html>
