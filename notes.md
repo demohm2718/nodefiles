@@ -73,3 +73,12 @@ Installed body-parser with `sudo npm install body-parser`.
 
 To check HTML verbs w/ the server, we use a **REST Client** plugin for the Firefox browser.
 - Within `http_server.js`, we use the REST client to pass in values for `empName` and `weight` using the POST method into `http;//localhost:8000`
+
+### NoSQL Storage using Node.js
+Created `myApp.js`.
+The goal is to connect a SQL database by using Node.
+What they *didn't* tell me was that i needed to `npm install mongodb` so that importing it in `myApp` is successful.
+The `MongoClient` is what connects us to our MongoDB by passing our connection URI into it.
+We created a new instance of `MongoClient` using `mclient` and using the clients functions to `.connect()` with database.
+
+
