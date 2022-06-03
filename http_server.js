@@ -1,20 +1,20 @@
-import bodyParser from 'body-parser';
+// Add HTTP packages
 import express from 'express';
 const app = express();
-//
-// Will parse url-encoded bodies that has the correst Content-Type and
-// it will only accept UTF-8 encoding.
-//      'extended' means parse using the querystring library
-app.use(bodyParser.urlencoded({ extended: false }));
-//
-app.post('/weighin', (req, res) => {
-    let empName = req.body.empName;
-    let weight = req.body.weight;
-    console.log(`POST request handled: empName is ${empName} and weight is ${weight}`);
-    res.end(`Hello Mr. ${empName}, your weight comes out to be ${weight} pounds.`);
+const port = 8000;
+let router = express.Router();
+router.get('/', function(req, res) {
+    res.send('Root being served.');
 });
 //
-app.listen(8000, () => {
-    console.log("Server is up and runnin dude.. Good job! It's at http://localhost:8000");
+router.get('/aboutus', function(req, res) {
+    res.send('About Us being served.');
 });
 //
+router.get('/products/:productID', function(req, res) {
+    res.send('You are viewing product #' + req.params.productID);
+});
+//
+app.listen(port);
+app.use('/', router);
+console.log('Listening on ' + port);

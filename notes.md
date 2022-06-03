@@ -81,4 +81,6 @@ What they *didn't* tell me was that i needed to `npm install mongodb` so that im
 The `MongoClient` is what connects us to our MongoDB by passing our connection URI into it.
 We created a new instance of `MongoClient` using `mclient` and using the clients functions to `.connect()` with database.
 
-
+### Routing in Express
+We're modifying `http_server.js` again to use express.
+We are taking advantage of the `Router` module within express to handle routing.
