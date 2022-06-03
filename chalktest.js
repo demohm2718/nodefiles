@@ -1,3 +1,4 @@
+// From Ex.1
 //const chalk = require('chalk');
 import chalk from 'chalk';
 //Ran into an issue using const chalk = require('chalk');
