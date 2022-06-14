@@ -3,12 +3,11 @@ import express from 'express';
 import bodyParser from 'body-parser';
 // local packages
 import Weight from './models/emp_weights.js';
+
 const app = express();
 const port = 8000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
-//const Weight = require('./models/emp_weights.js');
 const weight = new Weight();
 const router = express.Router();
 
@@ -28,7 +27,29 @@ router.post("/putweights", function(req, res){
         }
     });
 });
-//
+// Get records
+router.get("/getweights", function(req, res){
+    Weight.find(function(err, getweights){
+        if (err){
+            res.end(err.toString())
+        }
+        else {
+            res.json(getweights)
+        }
+    });
+});
+// Remove all records
+router.get("/deleteweights", function(req, res){
+    Weight.deleteMany( {}, function(err, result){
+        if (err){
+            res.end(err.toString())
+        }
+        else {
+            res.json(result)
+        }
+    });
+});
+
 app.use('/', router);
 app.listen(port);
 console.log('Listening on ' + port);
