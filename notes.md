@@ -4,8 +4,10 @@
 ### Node.js Intro
 **Intro**
 - Node is very easy to install.
+
 **NPM CLI**
 - I had issues because I was using an outdated practice of `const chalk = require('chalk');`.
+
 **NPM Scripts**
 - Here, we created `chalktest.js` and installed a package called "chalk" by using `npm install chalk`.
 This package writes dynamic command line outputs.
@@ -51,12 +53,16 @@ Frameworks include
 - Web & Mobile apps.
 - Strong HTML functionality => faster and simpler API dev.
 - Part of the **MEAN** stack.
+
 **M**ongoDB
+
 **E**xpress.js
+
 **A**ngularJS
+
 **N**ode.js
 
-2. Koa.js
+1. Koa.js
 - Same as Express but lighter weight, smaller footprint.
 - ECMAScript 6
 - Generators -> start/resume code exec w/in stack
@@ -84,3 +90,8 @@ We created a new instance of `MongoClient` using `mclient` and using the clients
 ### Routing in Express
 We're modifying `http_server.js` again to use express.
 We are taking advantage of the `Router` module within express to handle routing.
+
+### Connecting to MongoDB
+Performed `npm install mongoose`.
+`mongoose` is an object data modeling tool or library for MongoDB.
+
